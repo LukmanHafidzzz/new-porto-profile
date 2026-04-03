@@ -1,0 +1,45 @@
+:root {
+    --vr-lavender: #5431ed;
+    --pr-lavender: #7456FF;
+    --sr-lavender: #8368FF;
+
+    --grad: linear-gradient(135deg, var(--vr-lavender), var(--pr-lavender), var(--sr-lavender));
+    --grad-text: linear-gradient(135deg, var(--sr-lavender), var(--pr-lavender));
+}
+
+.text-sr-lavender {
+    color: var(--sr-lavender);
+}
+
+.skill-cat-dot {
+    background: var(--cat-color);
+    box-shadow: 0 0 8px var(--cat-color);
+}
+
+.skill-cat-label {
+    color: var(--cat-color);
+}
+
+.skill-cat-line {
+    background: linear-gradient(to right, color-mix(in srgb, var(--cat-color) 19%, transparent), transparent);
+    height: 1px;
+    flex: 1;
+}
+
+.skill-badge-glow {
+    background: color-mix(in srgb, var(--cat-color) 15%, transparent);
+}
+
+.skill-badge {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    color: white;
+    transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+.skill-badge:hover {
+    border-color: color-mix(in srgb, var(--cat-color) 31%, transparent);
+    background: color-mix(in srgb, var(--cat-color) 7%, transparent);
+    color: var(--cat-color);
+}

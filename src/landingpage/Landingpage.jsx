@@ -3,85 +3,15 @@ import './style.css';
 
 import NewNavbar from "../components/navbar/Navbar";
 import NewHero from "../components/hero/Hero";
-import { NAV_LINKS } from "../constants/navLinks";
+import NewAbout from "../components/about/about";
+import NewSkill from "../components/skill/Skill";
+import { navLinks } from "../constants/navLinks";
 
 const C1 = "#5431ed";
 const C2 = "#7456FF";
 const C3 = "#8368FF";
 const GRAD = `linear-gradient(135deg, ${C1}, ${C2}, ${C3})`;
 const GRAD_TEXT = `linear-gradient(135deg, ${C3}, ${C2})`;
-
-const SKILL_CATEGORIES = [
-    {
-        label: "Frontend",
-        color: "#61DAFB",
-        skills: ["JavaScript", "React.js", "Next.js", "TypeScript", "Tailwind CSS", "HTML & CSS"],
-    },
-    {
-        label: "Backend",
-        color: "#68A063",
-        skills: ["Node.js", "Express.js", "REST API", "PostgreSQL", "MongoDB", "Prisma"],
-    },
-    {
-        label: "Tools & Others",
-        color: C3,
-        skills: ["Git & GitHub", "Vite", "Postman", "VS Code", "Vercel", "Linux"],
-    },
-];
-
-const EXPERIENCES = [
-    {
-        role: "Frontend Developer Intern",
-        place: "PT. Digital Nusantara · Yogyakarta",
-        duration: "Jun 2024 – Aug 2024 · 3 bulan",
-        desc: "Membangun dan mengoptimasi antarmuka pengguna berbasis React untuk sistem manajemen internal perusahaan. Berkolaborasi langsung dengan tim backend dalam integrasi REST API.",
-        projects: [
-            {
-                name: "Dashboard Admin Internal",
-                detail: "Dashboard monitoring stok & transaksi dengan visualisasi data real-time menggunakan Chart.js",
-            },
-            {
-                name: "Sistem Notifikasi",
-                detail: "Komponen notifikasi berbasis Socket.io untuk update status pesanan secara live",
-            },
-        ],
-        tech: ["React.js", "TypeScript", "Tailwind CSS", "Chart.js", "REST API"],
-    },
-    {
-        role: "Fullstack Developer",
-        place: "UKM Teknologi & Informatika UNY",
-        duration: "Jan 2024 – Sekarang · 1 tahun+",
-        desc: "Bergabung sebagai anggota divisi pengembangan web organisasi kampus. Memimpin tim kecil dalam membangun platform digital untuk mendukung kegiatan kemahasiswaan.",
-        projects: [
-            {
-                name: "Portal Kegiatan Mahasiswa",
-                detail: "Sistem pendaftaran & tracking kegiatan UKM dengan fitur absensi QR Code",
-            },
-            {
-                name: "Website Profile UKM",
-                detail: "Landing page resmi organisasi dengan CMS sederhana untuk update konten",
-            },
-        ],
-        tech: ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Vercel"],
-    },
-    {
-        role: "Freelance Web Developer",
-        place: "Independent · Remote",
-        duration: "Mar 2023 – Sekarang · 2 tahun+",
-        desc: "Mengerjakan berbagai proyek web untuk klien UMKM dan startup lokal — mulai dari landing page, toko online, hingga sistem manajemen sederhana.",
-        projects: [
-            {
-                name: "Toko Online Batik Laras",
-                detail: "E-commerce sederhana dengan sistem pembayaran Midtrans & panel admin",
-            },
-            {
-                name: "Landing Page NutriTrack",
-                detail: "Website profil aplikasi kesehatan anak, responsive dan SEO-optimized",
-            },
-        ],
-        tech: ["React.js", "Express.js", "MongoDB", "Midtrans", "Tailwind CSS"],
-    },
-];
 
 const PROJECTS = [
     {
@@ -179,217 +109,6 @@ function FloatingOrbs() {
             <div className="orb orb-3 animate-float-fast" />
             <div className="orb orb-4 animate-float-medium" />
         </div>
-    );
-}
-
-// ─── ABOUT ─────────────────────────────────────────────────────
-function AboutSection() {
-    const [ref, inView] = useInView();
-    return (
-        <section id="about" className="py-32 px-6" ref={ref}>
-            <div className="max-w-5xl mx-auto">
-                <div className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-                    <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: C3 }}>
-                        Who I Am
-                    </p>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-16">About Me</h2>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    {/* Glass card */}
-                    <div
-                        className={`transition-all duration-700 delay-200 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
-                    >
-                        <div className="relative">
-                            <div
-                                className="absolute inset-0 rounded-3xl blur-2xl"
-                                style={{ background: `linear-gradient(135deg, ${C1}30, ${C2}20)` }}
-                            />
-                            <div
-                                className="relative rounded-3xl p-8"
-                                style={{
-                                    border: `1px solid ${C2}20`,
-                                    background: "rgba(255,255,255,0.025)",
-                                    backdropFilter: "blur(20px)",
-                                }}
-                            >
-                                <div
-                                    className="w-28 h-28 rounded-2xl flex items-center justify-center text-4xl font-black text-white mb-6 mx-auto"
-                                    style={{ background: GRAD, boxShadow: `0 12px 40px ${C1}50` }}
-                                >
-                                    YN
-                                </div>
-                                <div className="text-center">
-                                    <h3 className="text-xl font-bold text-white mb-1">Your Name</h3>
-                                    <p className="text-sm font-medium mb-5" style={{ color: C3 }}>
-                                        Fullstack Web Developer
-                                    </p>
-                                    <div className="flex justify-center gap-2">
-                                        {["GitHub", "LinkedIn", "Email"].map((s) => (
-                                            <a
-                                                key={s}
-                                                href="#"
-                                                className="px-3 py-1.5 rounded-lg text-xs text-slate-400 hover:text-white transition-all duration-200"
-                                                style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
-                                                onMouseEnter={(e) => {
-                                                    e.currentTarget.style.borderColor = `${C2}50`;
-                                                    e.currentTarget.style.color = "white";
-                                                }}
-                                                onMouseLeave={(e) => {
-                                                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-                                                    e.currentTarget.style.color = "#94a3b8";
-                                                }}
-                                            >
-                                                {s}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Text */}
-                    <div
-                        className={`transition-all duration-700 delay-300 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
-                    >
-                        <div className="space-y-5 text-slate-400 leading-relaxed">
-                            <p>
-                                I am a student of <span className="text-white font-semibold">Information Technology</span> at the{" "}
-                                <span className="font-semibold" style={{ color: C3 }}>
-                                    State University of Yogyakarta
-                                </span>{" "}
-                                who is passionate about Fullstack web development.
-                            </p>
-                            <p>
-                                My interest in technology is mainly focused on the use of{" "}
-                                <span className="text-yellow-300 font-semibold">JavaScript</span> because of its incredible flexibility —
-                                allowing me to work effectively on both <span className="text-white font-medium">Frontend</span> and{" "}
-                                <span className="text-white font-medium">Backend</span> development.
-                            </p>
-                            <p>
-                                I believe that every project is an opportunity to learn and grow. I am committed to continually exploring
-                                and enhancing my abilities in the world of web development.
-                            </p>
-                        </div>
-
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-4 mt-10">
-                            {[
-                                { val: "10+", label: "Projects" },
-                                { val: "2+", label: "Years Exp" },
-                                { val: "5+", label: "Tech Stack" },
-                            ].map(({ val, label }) => (
-                                <div key={label} className="group relative">
-                                    <div
-                                        className="absolute inset-0 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                        style={{ background: `${C1}20` }}
-                                    />
-                                    <div
-                                        className="relative text-center p-4 rounded-2xl transition-all duration-300"
-                                        style={{
-                                            border: "1px solid rgba(255,255,255,0.06)",
-                                            background: "rgba(255,255,255,0.025)",
-                                            backdropFilter: "blur(8px)",
-                                        }}
-                                        onMouseEnter={(e) => (e.currentTarget.style.borderColor = `${C2}40`)}
-                                        onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)")}
-                                    >
-                                        <p
-                                            className="text-3xl font-black"
-                                            style={{ background: GRAD_TEXT, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
-                                        >
-                                            {val}
-                                        </p>
-                                        <p className="text-slate-500 text-xs mt-1">{label}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-// ─── SKILLS ────────────────────────────────────────────────────
-function SkillsSection() {
-    const [ref, inView] = useInView(0.1);
-    return (
-        <section id="skills" className="py-32 px-6" ref={ref}>
-            <div className="max-w-5xl mx-auto">
-                <div className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-                    <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: C3 }}>
-                        What I Know
-                    </p>
-                    <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Skills & Tools</h2>
-                    <p className="text-slate-400 mb-16 max-w-xl">Technologies I work with to build modern, fullstack web applications.</p>
-                </div>
-
-                <div className="flex flex-col gap-10">
-                    {SKILL_CATEGORIES.map((cat, ci) => (
-                        <div
-                            key={cat.label}
-                            className="transition-all duration-700"
-                            style={{
-                                transitionDelay: `${ci * 120}ms`,
-                                opacity: inView ? 1 : 0,
-                                transform: inView ? "translateY(0)" : "translateY(24px)",
-                            }}
-                        >
-                            {/* Category header */}
-                            <div className="flex items-center gap-3 mb-5">
-                                <div className="w-2 h-2 rounded-full" style={{ background: cat.color, boxShadow: `0 0 8px ${cat.color}` }} />
-                                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: cat.color }}>
-                                    {cat.label}
-                                </span>
-                                <div
-                                    className="flex-1 h-px"
-                                    style={{ background: `linear-gradient(to right, ${cat.color}30, transparent)` }}
-                                />
-                            </div>
-
-                            {/* Badge pills */}
-                            <div className="flex flex-wrap gap-3">
-                                {cat.skills.map((skill, si) => (
-                                    <div
-                                        key={skill}
-                                        className="group relative transition-all duration-300 hover:scale-105"
-                                        style={{ transitionDelay: `${ci * 120 + si * 50}ms` }}
-                                    >
-                                        <div
-                                            className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"
-                                            style={{ background: `${cat.color}25` }}
-                                        />
-                                        <div
-                                            className="relative px-4 py-2.5 rounded-xl text-sm font-medium text-white transition-all duration-300"
-                                            style={{
-                                                border: `1px solid rgba(255,255,255,0.08)`,
-                                                background: "rgba(255,255,255,0.04)",
-                                                backdropFilter: "blur(8px)",
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.currentTarget.style.borderColor = `${cat.color}50`;
-                                                e.currentTarget.style.background = `${cat.color}12`;
-                                                e.currentTarget.style.color = cat.color;
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-                                                e.currentTarget.style.background = "rgba(255,255,255,0.04)";
-                                                e.currentTarget.style.color = "white";
-                                            }}
-                                        >
-                                            {skill}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
     );
 }
 
@@ -681,7 +400,7 @@ function ProjectsSection() {
 export default function Landingpage() {
     const [active, setActive] = useState("Home");
     useEffect(() => {
-        const sections = NAV_LINKS.map((n) => document.getElementById(n.toLowerCase()));
+        const sections = navLinks.map((n) => document.getElementById(n.toLowerCase()));
         const obs = new IntersectionObserver(
             (entries) => {
                 entries.forEach((e) => {
@@ -707,8 +426,8 @@ export default function Landingpage() {
 
             <main>
                 <NewHero />
-                <AboutSection />
-                <SkillsSection />
+                <NewAbout />
+                <NewSkill />
                 <ExperienceSection />
                 <ProjectsSection />
             </main>

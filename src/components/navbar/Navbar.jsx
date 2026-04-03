@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
-import { NAV_LINKS } from '../../constants/navLinks';
+import { navLinks } from '../../constants/navLinks';
 
 export default function Navbar({ active, setActive }) {
     const [scrolled, setScrolled] = useState(false);
@@ -32,7 +32,7 @@ export default function Navbar({ active, setActive }) {
                         </span>
                     </span>
                     <div className="hidden md:flex items-center gap-1">
-                        {NAV_LINKS.map((n) => {
+                        {navLinks.map((n) => {
                             const isActive = active === n;
 
                             return (
@@ -56,7 +56,7 @@ export default function Navbar({ active, setActive }) {
                 </div>
                 {open && (
                     <div className="md:hidden pt-4 pb-2 flex flex-col gap-1 mt-3 nav-divider">
-                        {NAV_LINKS.map((n) => (
+                        {navLinks.map((n) => (
                             <button
                                 key={n}
                                 onClick={() => scrollTo(n)}

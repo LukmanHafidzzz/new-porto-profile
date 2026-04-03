@@ -1,0 +1,16 @@
+:root {
+    --vr-lavender: #5431ed;
+    --pr-lavender: #7456FF;
+    --sr-lavender: #8368FF;
+
+    --grad: linear-gradient(135deg, var(--vr-lavender), var(--pr-lavender), var(--sr-lavender));
+    --grad-text: linear-gradient(135deg, var(--sr-lavender), var(--pr-lavender));
+}
+
+.text-sr-lavender {
+    color: var(--sr-lavender);
+}
+
+.vertical-timeline-line {
+    background: linear-gradient(to bottom, var(--pr-lavender), transparent);
+}
