@@ -1,0 +1,23 @@
+:root {
+    --vr-lavender: #5431ed;
+    --pr-lavender: #7456FF;
+    --sr-lavender: #8368FF;
+
+    --grad: linear-gradient(135deg, var(--vr-lavender), var(--pr-lavender), var(--sr-lavender));
+    --grad-text: linear-gradient(135deg, var(--sr-lavender), var(--pr-lavender));
+}
+
+.text-sr-lavender {
+    color: var(--sr-lavender);
+}
+
+.bottom-gradient-fade {
+    background: linear-gradient(to bottom, transparent, rgba(var(--accent), 0.03));
+}
+
+.card-tech-border {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04)
+}
+
+.github-btn {}

@@ -1,8 +1,8 @@
-import { useInView } from "../../hooks/useInView";
+import { UseInView } from "../../hooks/UseInView";
 import "./style.css";
 
 export default function About() {
-    const [ref, inView] = useInView();
+    const [ref, inView] = UseInView();
     return (
         <section id="about" className="py-32 px-6" ref={ref}>
             <div className="max-w-5xl mx-auto">

@@ -1,4 +1,4 @@
-export const experiences = [
+export const Experiences = [
     {
         role: "Frontend Developer Intern",
         place: "PT. Digital Nusantara · Yogyakarta",

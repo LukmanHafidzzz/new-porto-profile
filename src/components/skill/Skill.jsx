@@ -1,9 +1,9 @@
-import { useInView } from "../../hooks/useInView";
-import { skillCategories } from "../../constants/skillCategories";
+import { UseInView } from "../../hooks/UseInView";
+import { SkillCategories } from "../../constants/SkillCategories";
 import "./style.css";
 
 export default function Skill() {
-    const [ref, inView] = useInView(0.1);
+    const [ref, inView] = UseInView(0.1);
     return (
         <section id="skills" className="py-32 px-6" ref={ref}>
             <div className="max-w-5xl mx-auto">
@@ -15,7 +15,7 @@ export default function Skill() {
                     <p className="text-slate-400 mb-16 max-w-xl">Technologies I work with to build modern, fullstack web applications.</p>
                 </div>
                 <div className="flex flex-col gap-10">
-                    {skillCategories.map((cat, ci) => (
+                    {SkillCategories.map((cat, ci) => (
                         <div
                             key={cat.label}
                             className="transition-all duration-700"
