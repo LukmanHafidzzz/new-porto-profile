@@ -1,0 +1,56 @@
+:root {
+    --vr-lavender: #5431ed;
+    --pr-lavender: #7456FF;
+    --sr-lavender: #8368FF;
+
+    --grad: linear-gradient(135deg, var(--vr-lavender), var(--pr-lavender), var(--sr-lavender));
+    --grad-text: linear-gradient(135deg, var(--sr-lavender), var(--pr-lavender));
+}
+
+.nav-glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(7, 5, 15, 0.7);
+    border: 1px solid color-mix(in srgb, var(--pr-lavender), transparent 87%);
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--vr-lavender), transparent 90%);
+}
+
+.nav-logo-gradient {
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link-active {
+    color: var(--sr-lavender);
+    background: color-mix(in srgb, var(--vr-lavender), transparent 85%);
+}
+
+.nav-link-active:hover {
+    color: var(--sr-lavender);
+    background: color-mix(in srgb, var(--vr-lavender), transparent 85%);
+}
+
+.nav-divider {
+    border-top: 1px solid color-mix(in srgb, var(--pr-lavender), transparent 88%);
+}
+
+.nav-mobile-link {
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+
+.nav-mobile-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}

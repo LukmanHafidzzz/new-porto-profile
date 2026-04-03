@@ -1,0 +1,69 @@
+:root {
+    --pr-black: #0C0C0C;
+    --sr-black: #0F0F0F;
+    --tr-black: #131313;
+    --vr-lavender: #5431ed;
+    --pr-lavender: #7456FF;
+    --sr-lavender: #8368FF;
+    --sr-grey: #999999;
+    --tr-grey: rgba(255, 255, 255, 0.14);
+
+    --grad: linear-gradient(135deg, var(--vr-lavender), var(--pr-lavender), var(--sr-lavender));
+    --grad-text: linear-gradient(135deg, var(--sr-lavender), var(--pr-lavender));
+}
+
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem; 
+    border: 1px solid rgba(116, 86, 255, 0.25);
+    background: rgba(84, 49, 237, 0.06); 
+    backdrop-filter: blur(8px);
+}
+
+
+.availability-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: var(--sr-lavender);
+}
+
+
+.availability-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--sr-lavender);
+}
+
+.hero-gradient-text {
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-cursor {
+    color: var(--sr-lavender);
+}
+
+.university-text {
+    color: var(--sr-lavender);
+}
+
+.hero-btn-primary {
+    transition: all 0.3s ease;
+    background: var(--grad);
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--pr-lavender) 44%, transparent);
+}
+
+.hero-btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 42px color-mix(in srgb, var(--sr-lavender) 31%, transparent);
+}
+
+.scroll-indicator {
+    background: linear-gradient(to bottom, var(--pr-lavender), transparent);
+}
