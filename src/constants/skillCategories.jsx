@@ -2,16 +2,16 @@ export const SkillCategories = [
     {
         label: "Frontend",
         color: "#61DAFB",
-        skills: ["JavaScript", "React.js", "Next.js", "TypeScript", "Tailwind CSS", "HTML & CSS"],
+        skills: ["HTML & CSS", "Javascript", "Bootstrap CSS", "React.js", "Tailwind CSS"]
     },
     {
         label: "Backend",
         color: "#68A063",
-        skills: ["Node.js", "Express.js", "REST API", "PostgreSQL", "MongoDB", "Prisma"],
+        skills: ["Laravel", "Express.js", "Node.js", "MySQL", "REST API", "PostgreSQL", "Golang", "Web Server" ]
     },
     {
         label: "Tools & Others",
         color: "#8368FF",
-        skills: ["Git & GitHub", "Vite", "Postman", "VS Code", "Vercel", "Linux"],
+        skills: ["Git & GitHub", "Vite", "Postman", "VS Code", "Vercel", "Render", "Linux", "Figma", "PhpMyAdmin", "PgAdmin", "S3 Browser"]
     },
 ];

@@ -3,7 +3,7 @@ import './style.css'
 
 export default function Hero() {
     const [typed, setTyped] = useState("");
-    const words = ["Fullstack Developer", "JS Enthusiast", "Web Craftsman", "Problem Solver"];
+    const words = [ "Fullstack Developer", "Team Friendly", "Keep Learning", "Fast Learner" ];
     const [wi, setWi] = useState(0);
     const [ci, setCi] = useState(0);
     const [del, setDel] = useState(false);
@@ -75,7 +75,7 @@ export default function Hero() {
                         onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                         className="px-8 py-4 rounded-2xl font-semibold text-white hero-btn-primary"
                     >
-                        View My Work ↓
+                        View My Work
                     </button>
                     <button
                         onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
@@ -85,13 +85,9 @@ export default function Hero() {
                     </button>
                 </div>
 
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow opacity-40">
-                    <span className="text-slate-500 text-xs tracking-widest uppercase">Scroll</span>
-                    <div className="w-px h-12 scroll-indicator" />
-                </div>
                 {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow opacity-40">
                     <span className="text-slate-500 text-xs tracking-widest uppercase">Scroll</span>
-                    <div className="w-px h-12" style={{ background: `linear-gradient(to bottom, ${C2}, transparent)` }} />
+                    <div className="w-px h-12 scroll-indicator" />
                 </div> */}
             </div>
         </section>

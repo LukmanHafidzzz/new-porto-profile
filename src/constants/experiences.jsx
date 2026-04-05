@@ -1,25 +1,21 @@
 export const Experiences = [
     {
-        role: "Frontend Developer Intern",
-        place: "PT. Digital Nusantara · Yogyakarta",
-        duration: "Jun 2024 – Aug 2024 · 3 bulan",
-        desc: "Membangun dan mengoptimasi antarmuka pengguna berbasis React untuk sistem manajemen internal perusahaan. Berkolaborasi langsung dengan tim backend dalam integrasi REST API.",
+        role: "Fullstack Web Developer Intern",
+        place: "STI OPS Jakarta PT PLN (Persero) DIVSTI OPRS Jakarta 2",
+        duration: "Nov 2024 - Jan 2025 · 3 bulan",
+        desc: "Berkolaborasi dalam tim pengembangan menggunakan Laravel untuk membangun dan memelihara sistem manajemen vendor berbasis web dengan multi-level user (7+ role). Berkontribusi dalam pengembangan fitur backend, optimasi sistem, serta deployment dan konfigurasi server berbasis Linux.",
         projects: [
             {
-                name: "Dashboard Admin Internal",
-                detail: "Dashboard monitoring stok & transaksi dengan visualisasi data real-time menggunakan Chart.js",
-            },
-            {
-                name: "Sistem Notifikasi",
-                detail: "Komponen notifikasi berbasis Socket.io untuk update status pesanan secara live",
-            },
+                name: "Vendor Management System",
+                detail: "Sistem pengelolaan vendor end-to-end yang mencakup registrasi vendor, pengelolaan dan verifikasi dokumen, serta proses persetujuan multi-level hingga tahap final. Dilengkapi dengan fitur user activity tracking untuk memonitor menu yang diakses, aktivitas pengguna, dan histori penggunaan sistem, serta integrasi tanda tangan digital pada dokumen PDF menggunakan Setasign.",
+            }
         ],
-        tech: ["React.js", "TypeScript", "Tailwind CSS", "Chart.js", "REST API"],
+        tech: ["Laravel", "Bootstrap", "MySQL", "PostgreSQL", "Virtual Machine", "NGINX", "Ubuntu", "phpMyAdmin", "Setasign"],
     },
     {
         role: "Fullstack Developer",
         place: "UKM Teknologi & Informatika UNY",
-        duration: "Jan 2024 – Sekarang · 1 tahun+",
+        duration: "Jan 2024 - Sekarang · 1 tahun+",
         desc: "Bergabung sebagai anggota divisi pengembangan web organisasi kampus. Memimpin tim kecil dalam membangun platform digital untuk mendukung kegiatan kemahasiswaan.",
         projects: [
             {

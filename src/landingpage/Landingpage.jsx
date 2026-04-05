@@ -3,7 +3,7 @@ import './style.css';
 
 import NewNavbar from "../components/navbar/Navbar";
 import NewHero from "../components/hero/Hero";
-import NewAbout from "../components/about/about";
+import NewAbout from "../components/about/About";
 import NewSkill from "../components/skill/Skill";
 import NewExperience from "../components/experience/Experience";
 import NewProject from "../components/project/Project";

@@ -2,7 +2,7 @@ import { UseInView } from "../../hooks/UseInView";
 import { Social } from "../../constants/Social";
 import "./style.css";
 
-export default function About() {
+export default function AboutBaru() {
     const [ref, inView] = UseInView();
     return (
         <section id="about" className="py-32 px-6" ref={ref}>
@@ -25,12 +25,10 @@ export default function About() {
                             <div
                                 className="relative rounded-3xl p-8 about-card"
                             >
-                                <div className="w-28 h-28 rounded-2xl overflow-hidden mb-6 mx-auto ring-2 ring-white/10 hover:scale-105 transition">
-                                    <img
-                                        src="https://s3.nevaobjects.id/profile-porto/2jlruq2jlruq2jlr.webp"
-                                        alt="Lukman Hafidz"
-                                        className="w-full h-full object-cover"
-                                    />
+                                <div
+                                    className="w-28 h-28 rounded-2xl flex items-center justify-center text-4xl font-black text-white mb-6 mx-auto about-avatar"
+                                >
+                                    YN
                                 </div>
                                 <div className="text-center">
                                     <h3 className="text-xl font-bold text-white mb-1">Lukman Hafidz</h3>
@@ -41,7 +39,6 @@ export default function About() {
                                         {Social.map((s) => (
                                             <a
                                                 key={s.platform}
-                                                target="__blank"
                                                 href={s.url}
                                                 className="about-social-link px-3 py-1.5 rounded-lg text-xs"
                                             >
@@ -78,9 +75,9 @@ export default function About() {
                         </div>
                         <div className="grid grid-cols-3 gap-4 mt-10">
                             {[
-                                { val: "10", label: "Projects" },
-                                { val: "1+", label: "Years Exp" },
-                                { val: "10+", label: "Tech Stack" },
+                                { val: "10+", label: "Projects" },
+                                { val: "2+", label: "Years Exp" },
+                                { val: "5+", label: "Tech Stack" },
                             ].map(({ val, label }) => (
                                 <div key={label} className="group relative">
                                     <div className="absolute inset-0 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 stat-card-glow" />
