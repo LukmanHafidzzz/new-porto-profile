@@ -1,7 +1,7 @@
 import { ProjectConstant } from "../../constants/ProjectConstant";
 import { UseInView } from "../../hooks/UseInView";
 import './style.css';
-import ProjectCard from "./projectCard";
+import ProjectCard from "./ProjectCard";
 
 export default function Project() {
     const [ref, inView] = UseInView(0.05);
