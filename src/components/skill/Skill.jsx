@@ -1,5 +1,5 @@
 import { UseInView } from "../../hooks/UseInView";
-import { SkillCategories } from "../../constants/SkillCategories";
+import { SkillCategories} from "../../constants/SkillCategories";
 import "./style.css";
 
 export default function Skill() {
