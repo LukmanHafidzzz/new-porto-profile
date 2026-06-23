@@ -7,7 +7,7 @@ import NewAbout from "../components/about/About";
 import NewSkill from "../components/skill/Skill";
 import NewExperience from "../components/experience/Experience";
 import NewProject from "../components/project/Project";
-import { NavLinks } from "../constants/NavLinks";
+import { NavLinks } from "../constants/navLinks";
 
 function Cursor() {
     const [pos, setPos] = useState({ x: -100, y: -100 });
